@@ -29,10 +29,26 @@ div {
   font-size: 18px;
   font-weight: bold;
   font-family: Apple-Chancery;
-  border: 1px solid black;
   padding: 5px;
   background-color: silver;
 
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Cambria;
+  text-shadow: 
+  0 0 20px rgba(255, 255, 255, 0.8), 
+  0 0 30px rgba(255, 255, 255, 0.6);
+}
+
+h5 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Apple-Chancery;
 }
 
 img {

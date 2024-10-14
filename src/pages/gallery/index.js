@@ -2,54 +2,37 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function GalleryPage() {
     let images = [
-        'imgs/gargoyle.jpg',
-        'imgs/cemetery-couple.jpg',
-        'imgs/walkway-spook.jpg',
-        'imgs/ghosttree.jpg',
-        'imgs/ghosthouse-copy.jpg',
-        'imgs/michaelopolis-copy.jpg',
+        { src: 'imgs/gargoyle.jpg', title: 'Gargoyle' },
+        { src: 'imgs/cemetery-couple.jpg', title: 'Til Death' },
+        { src: 'imgs/walkway-spook.jpg', title: 'Enter Spook' },
+        { src: 'imgs/ghosttree.jpg', title: 'Ghost Tree' },
+        { src: 'imgs/ghosthouse-copy.jpg', title: 'Ghost House' },
+        { src: 'imgs/michaelopolis-copy.jpg', title: 'French Quarter' },
     ];
 
-    return  (
-    <div>
+return (
 
-    <h1>Gallery</h1> 
-
-    </div>
-    );
-
-    return (
-
-<div class="container text-center">
-    <div class="row">
-        <div class="col">
-            <img alt="cemetery-couple" class="img-card" src="imgs/cemetery-couple.jpg">
-            <p>Til Death</p>
-        </div> 
-        <div class="col">
-            <img alt="gargoyle" class="img-card" src="imgs/gargoyle.jpg">
-            <p>Gargoyle</p>
+        <div>
+        <h1>Gallery</h1>
+            <div className="container text-center">
+                <div className="row">
+                {images.slice(0, 3).map((img, index) => (
+                        <div className="col" key={index}>
+                            <img src={img.src} alt={img.title} className="img-fluid" />
+                            <h5>{img.title}</h5>
+                        </div>
+                        ))}
+                    </div>
+                    <div className="row">
+                        {images.slice(3, 6).map((img, index) => (
+                            <div className="col" key={index + 3}>
+                            <img src={img.src} alt={img.title} className="img-fluid" />
+                            <h5>{img.title}</h5>
+                    </div>
+                    ))}
+                </div>
+            </div>
         </div>
-        <div class="col">
-            <img alt="ghost-house" class="img-card" src="imgs/ghosthouse-copyjpg">
-            <p>Ghost House</p>
-        </div>
-        <div class="col">
-            <img alt="ghost-tree" class="img-card" src="imgs/ghosttree.jpg">
-            <p>Ghost Tree</p>
-        </div>
-        <div class="col">
-            <img width="200 px" alt="michaelopolis" class="img-card" src="imgs/michaelopolis-copyjpg">
-            <p>French Quarter</p>
-        </div>
-        <div class="col">
-            <img alt="spook" class="img-card" src="imgs/walkway-spook.jpg">
-            <p>Spooks</p>
-        </div>
-
-
-        </div>
-    </div>
-);
-
+        );
 }
+    
