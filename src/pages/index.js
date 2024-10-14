@@ -13,7 +13,7 @@ export default function HomePage() {
 
   return (
     <div style={divStyle}>
-      <h1>BOO! WELCOME TO MY NEXT ASSIGNMENT!</h1>
+      <h1>BOO! WELCOME TO MY NEXT.JS ASSIGNMENT!</h1>
     </div>
   );
 }
