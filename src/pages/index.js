@@ -1,11 +1,19 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { say } from 'cowsay';
+
 
 export default function HomePage() {
-  return  <div>
+  const divStyle = {
+    backgroundImage: `url(imgs/pexels-cemetery.jpg)`,
+    backgroundSize: 'cover', 
+    backgroundPosition: 'center',
+    height: '100vh', 
+    color: 'black', 
 
-  <h1>Hola!</h1> 
+  };
 
-  </div>
-} 
-
+  return (
+    <div style={divStyle}>
+      <h1>BOO!</h1>
+    </div>
+  );
+}
