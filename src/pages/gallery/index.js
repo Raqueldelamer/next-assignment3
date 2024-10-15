@@ -7,13 +7,21 @@ export default function GalleryPage() {
         { src: 'imgs/walkway-spook.jpg', title: 'Enter Spook' },
         { src: 'imgs/ghosttree.jpg', title: 'Ghost Tree' },
         { src: 'imgs/ghosthouse-copy.jpg', title: 'Ghost House' },
-        { src: 'imgs/michaelopolis-copy.jpg', title: 'French Quarter' },
+        { src: 'imgs/michaeopolis-1.jpg', title: 'French Quarter' },
     ];
+
+    const divStyle = {
+        backgroundImage: `url(imgs/pexels-cemetery1.jpg)`,
+        backgroundSize: 'cover', 
+        backgroundPosition: 'center',
+        height: '100vh', 
+        color: 'black', 
+    };
 
 return (
 
-        <div>
-        <h1>Gallery</h1>
+    <div style={divStyle}>
+        <h1>GALLERY</h1>
             <div className="container text-center">
                 <div className="row">
                 {images.slice(0, 3).map((img, index) => (
@@ -32,7 +40,7 @@ return (
                     ))}
                 </div>
             </div>
-        </div>
-        );
+    </div>
+    );
 }
     

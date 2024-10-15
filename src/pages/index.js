@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 export default function HomePage() {
   const divStyle = {
     backgroundImage: `url(imgs/pexels-cemetery1.jpg)`,
